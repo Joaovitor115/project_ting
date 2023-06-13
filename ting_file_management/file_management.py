@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def txt_importer(path_file):
     if not os.path.isfile(path_file):
         sys.stderr.write('Arquivo {} não encontrado\n'.format(path_file))
