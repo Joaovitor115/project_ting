@@ -8,14 +8,12 @@ def process(path_file, instance):
 
     file_list = my_function.txt_importer(path_file)
     content = {
-            "nome_do_arquivo": path_file,
-            "qtd_linhas": len(file_list),
-            "linhas_do_arquivo": file_list,
-        }
+        "nome_do_arquivo": path_file,
+        "qtd_linhas": len(file_list),
+        "linhas_do_arquivo": file_list,
+    }
     instance.enqueue(content)
-    print(
-        content
-    )
+    print(content)
 
 
 def remove(instance):
@@ -23,7 +21,10 @@ def remove(instance):
         return print("Não há elementos")
 
     path_file = instance.dequeue()
-    return print("Arquivo {} removido com sucesso".format(path_file['nome_do_arquivo']))
+    return print(
+        "Arquivo {} removido com sucesso".format(path_file["nome_do_arquivo"])
+    )
+
 
 def file_metadata(instance, position):
     """Aqui irá sua implementação"""
