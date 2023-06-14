@@ -1,5 +1,6 @@
 from ting_file_management import file_management as my_function
-
+import sys
+import os
 
 def process(path_file, instance):
     for element in instance.queue:
@@ -27,4 +28,6 @@ def remove(instance):
 
 
 def file_metadata(instance, position):
-    """Aqui irá sua implementação"""
+    if position < 0 or position >= len(instance.queue):
+        return sys.stderr.write("Posição inválida")
+    return print(instance.queue[position])
