@@ -1,6 +1,6 @@
 from ting_file_management import file_management as my_function
 import sys
-import os
+
 
 def process(path_file, instance):
     for element in instance.queue:
